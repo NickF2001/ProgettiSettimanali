@@ -1,0 +1,140 @@
+/* IMPOSTAZIONI GENERALI */
+
+html {font-size: 80%;}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+div {
+    display: inline-block;
+}
+
+.header, .description {
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* FONTS */
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    color: #393d41;
+    font-size: 1.4rem;
+    line-height: 1.65;
+}
+
+#bigger, h2 {
+    font-size: 2em;
+}
+
+/* HEADER */
+#logo {
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    background-color: black;
+}
+
+.text-description {
+    padding: 20%;
+}
+
+/* MAIN */
+
+/*description*/
+.description {
+    background-image: url(../images/banner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    padding: 30px;
+}
+
+button {
+    background-color: #f04c2f;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.blue-text {
+    font-family: 'Montserrat', sans-serif;
+    color: #25a2c3;
+    line-height: 1.5;
+    font-size: larger;
+}
+
+.bigger {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*tutti ti cercheranno*/
+main {
+    background-color: white;
+}
+
+#main-img {
+    background-size: contain;
+}
+
+.laptop-img {
+    border-radius: 80%;
+}
+
+/* epicode garantisce */
+.orange {
+    background-color: #e22d0e;
+    width: 100%;
+    color: white;
+}
+
+/* boxes */
+#box1, #box2, #box3 {
+    border: 2px solid #dee1e3;
+    margin: 50px;
+}
+
+/* ARTICLE */
+
+
+/* ASIDE */
+
+
+/* FOOTER */
+.partiamo {
+    text-decoration: none;
+    color: white;
+}
+
+a {
+    color: white;
+}
+
+#contattaci {
+    font-family: 'Montserrat', sans-serif;
+}
+
+hr {
+    width: 100%;
+}
+
+.lighter {
+    font-weight: lighter;
+}
+
+/* icons */
+
+footer {
+    background-color: #25a2c3;
+    color: white;
+}
+
+.fa-solid {
+    color: white;
+}

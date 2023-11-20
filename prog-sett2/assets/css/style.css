@@ -1,0 +1,167 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #E9EDEE;
+}
+
+/* HEADER */
+.logo {
+    background-color: #222F3F;
+}
+
+#headerimg {
+    margin-left: 10px;
+    padding: 5px;
+}
+
+nav {
+    background-color: #364759;
+}
+
+nav p {
+    display: inline-block;
+    color: white;
+    margin-left: 10px;
+    font-size: 0.7em;
+}
+
+.nav {
+    padding-left: 20px;
+}
+
+/* MAIN */
+main {
+    text-align: center;
+    margin: 20px;
+}
+
+.orange {
+    background-color: #F56600;
+    margin-bottom: 20px;
+    font-size: 0.7em;
+    padding: 7px;
+}
+
+.orange p {
+    margin: 0;
+    color: white;
+}
+
+.bg-image {
+    background-image: url(../images/bg-image.png);
+    background-size: contain;
+    padding: 30px;
+    color: white;
+}
+
+.perfect-gift {
+    text-align: left;
+    background-color: white; 
+    margin-top: 20px; 
+}
+
+.perfect-gift p {
+    display: inline-block;
+}
+
+.perfect-gift div {
+    margin-left: 20px;
+}
+
+.gift-div {
+    margin: 20px;
+}
+
+.card1, .card2, .card3, .card4 {
+    width: 250px;
+    height: 300px;
+    margin: 5px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.card1 {
+    background-image: url(../images/img_1.jpg);
+    background-size: cover;
+}
+
+.card2 {
+    background-image: url(../images/img_2.jpg);
+    background-size: cover;
+}
+
+.card3 {
+    background-image: url(../images/img_3.jpg);
+    background-size: cover;
+}
+
+.card4 {
+    background-image: url(../images/img_4.jpg);
+    background-size: cover;
+}
+
+
+.perfect-gift img {
+    border-radius: 20px;
+    width: 400px;
+    height: 50vh;
+    object-fit: cover;
+    text-align: center;
+
+    display: inline-block;
+    margin-bottom: 20px;
+
+    box-shadow: 9px 4px 20px #cfcfcf;
+}
+
+/*
+.figure1 img {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.figure1 figcaption{
+    font-size: 0.9em;
+}
+
+.figure2 img {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.figure2 figcaption{
+    font-size: 0.9em;
+}
+*/
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+}
+
+.footer1 {
+    background-color: #364759;
+}
+
+.footer1 p {
+    display: inline-block;
+    color: white;
+    margin-left: 10px;
+    font-size: 0.7em;
+}
+
+footer img {
+    width: 10%;
+    padding-top: 30px;
+}
+
+.imagefooter {
+    background-color: #222F3F;
+}
