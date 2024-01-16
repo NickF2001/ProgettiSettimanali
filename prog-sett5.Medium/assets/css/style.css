@@ -1,0 +1,338 @@
+/* GENERALI */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ z-index: 0;
+ }
+ 
+ 
+ header, .banner1 {
+     background-color: #ffc017;
+ }
+ 
+ .tag, .keywords p {
+     background-color: #F2F2F2;
+     padding: 10px;
+     border-radius: 50px;
+ }
+ 
+ .articles, .discover-more {
+     margin-top: 7em;
+ }
+ 
+ 
+ /* HEADER */
+ 
+ header {
+     position: sticky;
+     top: 0;
+     z-index: 1;
+     border-bottom: 1px solid black;
+     transition: background-color 0.5s ease, opacity 0.5s ease;
+     opacity: 1;
+     display: flex;
+     justify-content: space-between;
+ }
+ 
+ header.hidden {
+     opacity: 0;
+   }
+ 
+ nav {
+     display: flex;
+     float: right;
+ }
+ 
+ nav ul {
+     list-style: none;
+ }
+ 
+ nav li {
+     display: inline-block;
+     padding: 20px; 
+ }
+ 
+ nav li a {
+     text-decoration: none;
+     color: black;
+ }
+ 
+ header {
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+ }
+ 
+ .nav-btn {
+     display: flex;
+     flex-wrap: nowrap;
+ }
+ 
+ .buttonHeader:hover {
+     background-color:black;
+ }
+ 
+ .headerBtn a {
+     text-decoration: none;
+     color: white;
+ }
+ 
+ .headerBtn {
+ background-color: #191919;
+ padding: 10px 20px;
+ border: none;
+ border-radius: 50px;
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ cursor: pointer;
+ font-size: 16px;
+ transition: background-color 0.5s ease, color 0.5s ease, opacity 0.5s ease;
+ opacity: 1;
+ }
+ 
+ .headerBtn:hover{
+     color: black;
+     border: none;
+ }
+ 
+ .headerBtn.hidden {
+     opacity: 0;
+   }
+ 
+ /* MAIN */
+ 
+ /* BANNER 1 */
+ h1 {
+     font-size: 5em;
+     font-weight: lighter;
+     font-family: Georgia, 'Times New Roman', Times, serif
+ }
+ 
+ .banner1 h3 {
+     font-size: 25px;
+     font-weight: lighter;
+     position: relative;
+     bottom: 50px;
+     color: #242424;
+ }
+ 
+ #start {
+     color: white;
+     background-color: #191919;
+ padding: 10px 50px;
+ border: 2px solid #191919;
+ border-radius: 50px;
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ cursor: pointer;
+ font-size: 20px;
+ position: relative;
+ bottom: 50px;
+ }
+ 
+ #start a {
+     text-decoration: none;
+     color: white;
+ }
+ 
+ #start:hover{
+     color: black;
+     border: solid 2px black;
+ }
+ 
+ .banner-text-button {
+     width: 50%;
+     padding: 30px 30px;
+ }
+ 
+ #svg {
+     width: 50%;
+ }
+ 
+ .banner1 {
+     border-bottom: 1px solid black;
+     display: flex;
+     justify-content: baseline;
+ }
+ 
+ svg {
+     vertical-align: middle;
+ }
+ *, *:before, *:after {
+     box-sizing: inherit;
+ }
+ 
+ /* BANNER 2 */
+ 
+ #whitePart {
+     padding: 2.1em;
+ }
+ 
+ .banner2 {
+     border-bottom: 1px solid #F2F2F2;
+ }
+ 
+ .banner2 p{
+     font-weight: bold;
+ }
+ 
+ .trending {
+  display: flex;
+  justify-content: baseline;
+  gap: 10px;
+ }
+ 
+ .trending svg {
+     position: relative;
+     top: 10px;
+ }
+ 
+ /* TRENDS */
+ 
+ .trend1, .trend2, .trend3, .trend4, .trend5, .trend6 {
+     width: 350px;
+ }
+ 
+ .trend1 img, .trend2 img, .trend3 img, .trend4 img, .trend5 img, .trend6 img {
+     border-radius: 50%;
+     width: 7%;
+     float: left;
+     margin-right: 10px;
+ }
+ 
+ .account {
+     font-size: 12px;
+ }
+ 
+ .date-time {
+     color: #AFACC6;
+     font-size: 12px;
+     font-weight: lighter;
+     display: flex;
+     justify-content: space-between;
+     
+ }
+ 
+ .trend1 h3, .trend2 h3, .trend3 h3, .trend4 h3, .trend5 h3, .trend6 h3 {
+     float: left;
+     padding-right: 20px;
+     position: relative;
+     bottom: 38px;
+     font-size: 2em;
+     color: #E6E6E6;
+ }
+ 
+ .trends {
+     display: flex;
+     flex-wrap: wrap;
+     gap: 40px;
+     align-items: center;
+ }
+ 
+ /* BOXES */
+ .box1, .box2, .box3, .box4, .box5, .box6, .box7 {
+     width: 90%;
+     display: flex;
+     justify-content:space-between;
+     gap: 20px;
+ }
+ 
+ .box1 .profilePhoto, .box2 .profilePhoto, .box3 .profilePhoto, .box4 .profilePhoto, .box5 .profilePhoto, .box6 .profilePhoto, .box7 .profilePhoto {
+     border-radius: 50%;
+     width: 5%;
+     float: left;
+     margin-right: 10px;
+ }
+ 
+ .account {
+     font-size: 12px;
+ }
+ 
+ .account p {
+     position: relative;
+     top: 5px;
+ }
+ 
+ .box1 h3, .box2 h3, .box3 h3, .box4 h3, .box5 h3, .box6 h3, .box7 h3 {
+     margin-top:15px;
+     margin-bottom: 5px;
+ 
+ }
+ 
+ .content {
+     color: #6B6B6B;
+     margin: 0;
+ }
+ 
+ .info {
+     color: #AFACC6;
+     font-size: 12px;
+     font-weight: lighter;
+     display: flex;
+     justify-content: flex-start;
+     gap: 10px;
+     align-items: baseline;
+ }
+ 
+ .info p {
+     font-size: 1.2em;
+ }
+ 
+ .bottom-article {
+     display: flex;
+     justify-content: space-between;
+ }
+ 
+ 
+ .star {
+     position: relative;
+     top: 5px;
+ }
+ 
+ .immagine img {
+     width:20vw;
+ }
+ 
+ /* SECTION KEYWORDS */
+ 
+ .discover-more {
+     position: sticky;
+     top: 7em;
+     align-self: flex-start;
+ }
+ 
+ .discover-more p{
+     font-weight: bolder;
+ }
+ 
+ .keywords {
+     display: flex;
+     flex-wrap: wrap;
+     font-size: 14px;;
+ }
+ 
+ /* BANNER 3 */
+ 
+ .banner3 {
+     color: #242424;
+     display: flex;
+ }
+ 
+ .footer {
+     display: flex;
+     gap: 20px;
+     flex-wrap:wrap;
+     margin-top: 2em;
+     font-weight: lighter;
+     border-top:1px solid #F2F2F2;
+     padding-top: 10px;
+ }
+ 
+ .footer a {
+     text-decoration: none;
+     color: #6B6B6B;   
+ }
