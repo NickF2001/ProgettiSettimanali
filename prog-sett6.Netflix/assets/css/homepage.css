@@ -1,0 +1,97 @@
+/* RESET */
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.1;
+    background-color: #141414;
+    overflow-x: hidden;
+    width: 100vw;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+/* RESETS */
+
+/* NAVBAR */
+
+/* nav */
+nav{
+    position: fixed;
+    width: 100vw;
+}
+
+/* logo */
+.logo{
+    width: 150px;
+}
+
+/* dropdown */
+.dropdown-menu{
+    background-color: rgb(7, 7, 7);
+    font-size: 9px;
+    color: #fff;
+    border-top: 3px solid #fff;
+    margin-top: 30px;
+}
+
+.dropdown-menu .dropdown-item{
+     color: rgba(255, 255, 255, 0.646);
+     text-align: center;
+     width: 250px;
+     font-size: 15px;
+     padding: 10px 20px;
+}
+
+.dropdown-menu .dropdown-item:hover{
+    background-color: rgba(255, 255, 255, 0.133);
+    color: #fff;
+}
+
+/* netflix-profile */
+.netflix-profile {
+    background-image: url(../assets/imgs/avatar.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+/* icons */
+.icon {
+    font-size: 20px;
+    padding: 5px 10px;
+    color: white;
+}
+
+/* NAVBAR */
+
+/* MAIN */
+.netflix-genres {
+    background-color: black;
+}
+
+
+/* MAIN */
+
+
+/* FOOTER */
+.row-footer ul li {
+    list-style: none;
+}
+
+.footer-icon {
+    font-size: 20px;
+    padding: 5px 10px;
+}
+
+.footer-btn a {
+    text-decoration: none;
+}
+/* FOOTER */

@@ -1,0 +1,15 @@
+.myUl ul li {
+    list-style: none; 
+}
+
+.myUl ul {
+    padding: 0 0;
+}
+
+.FooterContainer {
+    width: 40em;
+}
+
+.FooterContainer small, .FooterContainer li {
+    font-size: 0.7em;
+}
