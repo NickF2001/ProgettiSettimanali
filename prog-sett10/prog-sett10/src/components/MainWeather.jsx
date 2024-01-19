@@ -10,7 +10,7 @@ function MainWeather() {
 
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=eb2e657251724ce3a1143224856d2154&units=metric`;
 
-  // const APIdays = `https://api.openweathermap.org/data/2.5/forecast?lat=${data.coord[0].lat}.2085&lon=${data.coord[0].lon}&appid=eb2e657251724ce3a1143224856d2154&units=metric`
+  // const APIdays = `https://api.openweathermap.org/data/2.5/forecast?lat=${data.coord.lat}&lon=${data.coord.lon}&appid=25e1b8a92164beae4d571e17a214d5f2&units=metric`
 
   const searchLocation = (event) => {
     if (event.key === 'Enter') {
@@ -22,21 +22,21 @@ function MainWeather() {
     }
   }
 
-  const clearPage = () => {
-    setData(''); // Cancella i dati
-  };
-
   /*
-  const weekWeader = (event) => {
-    if (event.key === 'Enter') {
+  const weekWeader = (e) => {
+    if (e.key === 'Enter') {
       axios.get(APIdays).then((response) => {
         setData(response.data)
         console.log(response.data)
       })
-      setWeek('')
+      setLocation('')
     }
   }
   */
+
+  const clearPage = () => {
+    setData(''); // Cancella i dati
+  };
 
   return (
     <div className="app">
