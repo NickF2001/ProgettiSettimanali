@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import './MainWeather.css'
 
@@ -6,50 +6,51 @@ function MainWeather() {
 
   const [data, setData] = useState({})
   const [location, setLocation] = useState('')
-  // const [week, setWeek] = useState('')
+  const [weatherData, setWeatherData] = useState(null);
 
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=eb2e657251724ce3a1143224856d2154&units=metric`;
+  const apiKey = 'eb2e657251724ce3a1143224856d2154';
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${apiKey}&units=metric`;
+  const weekURL = `https://api.openweathermap.org/data/2.5/forecast?q=${location}&appid=${apiKey}&units=metric`;
 
-  // const APIdays = `https://api.openweathermap.org/data/2.5/forecast?lat=${data.coord.lat}&lon=${data.coord.lon}&appid=25e1b8a92164beae4d571e17a214d5f2&units=metric`
-
-  const searchLocation = (event) => {
-    if (event.key === 'Enter') {
+  const searchLocation = () => {
       axios.get(url).then((response) => {
         setData(response.data)
         console.log(response.data)
       })
       setLocation('')
-    }
   }
-
-  /*
-  const weekWeader = (e) => {
-    if (e.key === 'Enter') {
-      axios.get(APIdays).then((response) => {
-        setData(response.data)
-        console.log(response.data)
-      })
-      setLocation('')
+  
+  const fetchForecast = async () => {
+    try {
+      const response = await fetch(weekURL);
+      const data = await response.json();
+      setWeatherData(data);
+      console.log(data);
+    } catch (error) {
+      console.error("Error fetching forecast data:", error);
     }
-  }
-  */
-
-  const clearPage = () => {
-    setData(''); // Cancella i dati
   };
+
+  const handleSearch = () => {
+    if(location.length > 3) {
+      searchLocation();
+      fetchForecast();
+    }
+  }
+
 
   return (
     <div className="app">
       
       <div className="search">
         <input
+          type="text"
+          placeholder="Enter city name"
           value={location}
-          onChange={event => setLocation(event.target.value)}
-          onKeyPress={searchLocation}
-          placeholder='Enter Location'
-          type="text" />
+          onChange={(e) => {setLocation(e.target.value)}}
+          />
       
-      <button className="btn" onClick={clearPage}>Clear</button>
+      <button className="btn" onClick={() => handleSearch()}>Search</button>
       </div>
       <div className="container">
         <div className="top">
@@ -67,20 +68,40 @@ function MainWeather() {
 
         {data.name !== undefined &&
           <div className="bottom">
-            <div className="feels">
+            <div className="feels mx-4">
               {data.main ? <p className='bold'>{data.main.feels_like.toFixed()}°C</p> : null}
               <p>Feels Like</p>
             </div>
-            <div className="humidity">
+            <div className="humidity mx-4">
               {data.main ? <p className='bold'>{data.main.humidity}%</p> : null}
               <p>Humidity</p>
             </div>
-            <div className="wind">
+            <div className="wind mx-4">
               {data.wind ? <p className='bold'>{data.wind.speed.toFixed()} MPH</p> : null}
               <p>Wind Speed</p>
             </div>
           </div>
         }
+
+  {weatherData && (
+    <div className="forecast">
+      <div className="day  mx-4">
+          <div><img src={`./src/assets/${weatherData.list[8].weather[0].icon}.png`} alt="" height={90} /></div>
+          <p>{weatherData.list[8].dt_txt}</p>
+      </div>
+
+      <div className="day  mx-4">
+          <div><img src={`./src/assets/${weatherData.list[16].weather[0].icon}.png`} alt="" height={90} /></div>
+          <p>{weatherData.list[16].dt_txt}</p>
+      </div>
+
+      <div className="day mx-4">
+        <div><img src={`./src/assets/${weatherData.list[24].weather[0].icon}.png`} alt="" height={90} /></div>
+        <p>{weatherData.list[24].dt_txt}</p>
+      </div>
+    </div>
+  )}
+
 
       </div>
     </div>
