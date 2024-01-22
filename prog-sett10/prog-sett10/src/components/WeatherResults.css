@@ -11,12 +11,6 @@ body {
   background-color: rgba(0,0,0,0.4);
 }
 
-.blurred-background {
-  background: inherit;
-  filter: blur(8px);
-  z-index: -1;
-}
-
 p {
   font-size: 1.6rem;
 }

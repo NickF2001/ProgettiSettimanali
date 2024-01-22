@@ -1,9 +1,9 @@
-import MainWeather from '../components/MainWeather'
+import MainHome from '../components/MainHome'
 
 const Homepage = (page) => {
     return (
         <>
-            <MainWeather page={page} />
+            <MainHome page={page} />
         </>
     )
 }
