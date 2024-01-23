@@ -24,6 +24,7 @@ h1 {
   height: 150vh;
   position: relative;
   color: #fff;
+  margin: auto;
 }
 
 .app:before {
@@ -40,7 +41,7 @@ h1 {
 
 .app .search {
   text-align: center;
-  padding: 1rem;
+  padding: 2rem 1rem;
   display: flex;
   justify-content: center;
 }
