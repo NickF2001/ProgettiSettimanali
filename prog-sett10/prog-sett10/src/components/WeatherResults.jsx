@@ -11,16 +11,22 @@ function WeatherResults() {
   const [location, setLocation] = useState("");
   const dispatch = useDispatch();
 
+  // Estrai i dati necessari con una sola chiamata useSelector
+  const { dailyData, forecastData } = useSelector(state => ({
+    dailyData: state.dailyWeather.dailyData,
+    forecastData: state.forecastWeather.forecastData,
+  }));
+
+  // Resta del codice...
+
   // costanti per il meteo giornaliero
-  const cityName = useSelector(state => state.dailyData?.name) ? useSelector(state => state.dailyData.name) : '';
-  const weather = useSelector(state => state.dailyData?.weather) ? useSelector(state => state.dailyData.weather) : '';
-  const main = useSelector(state => state.dailyData?.main) ? useSelector(state => state.dailyData.main) : '';
-  const wind = useSelector(state => state.dailyData?.wind) ? useSelector(state => state.dailyData.wind) : '';
-console.log(cityName, weather, main, wind);
+  const cityName = dailyData.name || '';
+  const weather = dailyData.weather || '';
+  const main = dailyData.main || '';
+  const wind = dailyData.wind || '';
 
   // costanti per il meteo dei tre giorni successivi
-  const day = useSelector(state => state.forecastData?.list) ? useSelector(state => state.forecastData.list) : null;
-  const date = useSelector(state => state.forecastData?.list) ? useSelector(state => state.forecastData.list) : null;
+  const day = forecastData?.list || null;
 
   //APIkeys
   const apiKey = 'eb2e657251724ce3a1143224856d2154';
@@ -32,7 +38,6 @@ console.log(cityName, weather, main, wind);
     try {
       axios.get(url).then((response) => {
       dispatch(setDailyData(response.data));
-      console.log(response.data);
       });
     } catch (err) {
       console.error("Error fetching weather data:", err);
@@ -45,7 +50,6 @@ console.log(cityName, weather, main, wind);
       const response = await fetch(weekURL);
       const data = await response.json();
       dispatch(setForecastWeather(data));
-      console.log(data);
     } catch (error) {
       console.error("Error fetching forecast data:", error);
     }
@@ -122,34 +126,34 @@ console.log(cityName, weather, main, wind);
             <div className="day  mx-4">
               <div>
                 <img
-                  src={`./src/assets/${day && day[8]?.weather[0].icon}.png`}
+                  src={`./src/assets/${day[8]?.weather[0].icon}.png`}
                   alt=""
                   height={90}
                 />
               </div>
-              <p>{date && date.dt_txt[8]?.slice(0, 10)}</p>
+              <p>{day[8]?.dt_txt.slice(0, 10)}</p>
             </div>
 
             <div className="day  mx-4">
               <div>
                 <img
-                  src={`./src/assets/${day && day[16]?.weather[0].icon}.png`}
+                  src={`./src/assets/${day[16]?.weather[0].icon}.png`}
                   alt=""
                   height={90}
                 />
               </div>
-              <p>{date && date.dt_txt[16]?.slice(0, 10)}</p>
+              <p>{day[16]?.dt_txt.slice(0, 10)}</p>
             </div>
 
             <div className="day mx-4">
               <div>
                 <img
-                  src={`./src/assets/${day && day[24]?.weather[0].icon}.png`}
+                  src={`./src/assets/${day[24]?.weather[0].icon}.png`}
                   alt=""
                   height={90}
                 />
               </div>
-              <p>{date && date.dt_txt[24]?.slice(0, 10)}</p>
+              <p>{day[24]?.dt_txt.slice(0, 10)}</p>
             </div>
           </div>
         )}
