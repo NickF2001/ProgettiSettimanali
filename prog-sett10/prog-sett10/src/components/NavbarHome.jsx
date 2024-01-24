@@ -1,7 +1,9 @@
+// Questo è il componente della barra di navigazione avente un logo, un pulsante di toggle per la versione mobile
+// e un link alla pagina principale dell'applicazione
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'; // Importo il componente Link per poter navigare all'interno dell'applicazione
 import './NavbarHome.css'
 
 const NavbarHome = () => {

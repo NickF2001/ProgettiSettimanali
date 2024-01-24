@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import Button from 'react-bootstrap/Button'
 import "./WeatherResults.css";
 
-const MainHome = () => {
+const MainHome = () => { // Definisco il componente che sarà il main della hompage
     return (
         <div className="app text-center">
             <h1>Weather App</h1>
@@ -14,3 +14,7 @@ const MainHome = () => {
 }
 
 export default MainHome
+
+// E' un componente che rappresenta la pagina principale dell'applicazione meteorologica,
+// Contiene il titolo dell'app, un messaggio d'invito a cliccare il bottone sottostante per sapere il meteo nella città che si desidera
+// e il pulsante per avviare la ricerca di posizioni meteorologiche.
