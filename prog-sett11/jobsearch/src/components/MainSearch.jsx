@@ -1,8 +1,10 @@
 import React from 'react';
 import { Container, Row, Col, Form } from 'react-bootstrap';
+import Button from 'react-bootstrap/Button'
 import Job from './Job';
 import { useDispatch, useSelector } from 'react-redux';
 import { setQuery, setJobs } from '../actions/actions';
+import './style.css'
 
 const MainSearch = () => {
   const dispatch = useDispatch();
@@ -34,16 +36,17 @@ const MainSearch = () => {
   return (
     <Container>
       <Row>
-        <Col xs={10} className='mx-auto my-3'>
+        <Col xs={10} className='mx-auto my-3 text-center'>
           <h1 className='display-1'>Remote Jobs Search</h1>
         </Col>
-        <Col xs={10} className='mx-auto'>
-          <Form onSubmit={handleSubmit}>
+        <Col xs={10} className='mx-auto mb-4'>
+            <Form onSubmit={handleSubmit}>
             <Form.Control
               type='search'
               value={query}
               onChange={handleChange}
-              placeholder='type and press Enter'
+              placeholder='Type and press Enter'
+              className='bg-light border-secondary radius p-3'
             />
           </Form>
         </Col>

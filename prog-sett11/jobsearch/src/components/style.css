@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f0f0f0;
+}
+
+/* Job.jsx */
+.job a {
+    text-decoration: none;
+    color: #4e4e4e;
+}
+
+.radius {
+    border-radius: 20px;
+}
+
+.btn {
+    background-color: black;
+    padding: 8px 12px;
+    border-radius: 15px;
+}

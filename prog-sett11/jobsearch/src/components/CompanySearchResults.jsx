@@ -4,6 +4,7 @@ import Job from './Job';
 import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { setCompanyJobs } from '../actions/actions';
+import './style.css'
 
 const CompanySearchResults = () => {
   const dispatch = useDispatch();
@@ -34,7 +35,7 @@ const CompanySearchResults = () => {
     <Container>
       <Row>
         <Col className='my-3'>
-          <h1 className='display-4'>Job posting for: {params.company}</h1>
+          <h1 className='display-4 text-center'>Job posting for: {params.company}</h1>
           {companyJobs.map((jobData) => (
             <Job key={jobData._id} data={jobData} />
           ))}
